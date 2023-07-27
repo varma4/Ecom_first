@@ -1,0 +1,66 @@
+<!-- <ng-container *ngIf="!isLoggedIn">
+  <div class="pLogin">
+    <h2>Not Authorized</h2>
+    <div class="links">
+      <a routerLink="/login">Login</a>
+      <span>New User ? <a routerLink="/signup">SignUp</a></span>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="isLoggedIn">
+  <app-nav-bar></app-nav-bar>
+  <div class="search">
+    <input type="text" [(ngModel)]="searchText" (change)="(searchText)" />
+    <button (click)="searchItem()">Search</button>
+  </div>
+  <div class="main-container">
+    <div *ngFor="let data of dataa" class="container">
+      <a routerLink="/details/{{ data._id }}">
+        <img src="{{ data.images[0] }}" fetchpriority="high" alt="" />
+        <p>{{ data.name }}</p>
+        <p>{{ data.price | currency }}</p>
+        <p>
+          {{
+            data.description.length > 30
+              ? data.description.substring(0, 50) + "..."
+              : data.description
+          }}
+        </p>
+      </a>
+    </div>
+  </div>
+</ng-container> -->
+
+<ng-container *ngIf="!isLoggedIn">
+  <div class="pLogin">
+    <h2>Not Authorized</h2>
+    <div class="links">
+      <a routerLink="/login">Login</a>
+      <span>New User ? <a routerLink="/signup"> SignUp</a></span>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isLoggedIn">
+  <app-nav-bar></app-nav-bar>
+  <div class="search">
+    <input type="text" [(ngModel)]="searchText" (change)="(searchText)" />
+    <button (click)="searchItem()">Search</button>
+  </div>
+  <div class="container-products">
+    <div class="products" *ngFor="let product of dataa">
+      <a routerLink="/details/{{ product._id }}">
+        <div class="product-item">
+          <img src="{{ product.images[0] }}" class="img" fetchpriority="high" />
+          <p class="product-name">{{ product.name }}</p>
+          <p class="product-price">{{ product.price | currency }}</p>
+          <p class="product-description">
+            {{ product.description.length > 30 ? product.description.substring(0, 30) + "..." : product.description }}
+          </p>
+        </div>
+      </a>
+      <button class="cart-btn" (click)="addToCart(product)">Add to cart</button>
+    </div>
+  </div>
+
+</ng-container>

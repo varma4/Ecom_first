@@ -1,0 +1,16 @@
+
+<li class="nav-li">
+  <a routerLink="/">Home</a>
+</li>
+<div *ngIf="singleProduct">
+  <div *ngIf="singleProduct.images">
+    <div *ngFor="let image of singleProduct.images" class="images">
+      <img src="{{image}}" fetchpriority="high" alt="">
+    </div>
+  </div>
+</div>
+<div class="content">
+  <p>model: {{singleProduct?.name}}</p>
+  <p>Price: {{singleProduct?.price | currency}}</p>
+  <p>Description: {{singleProduct?.description}}</p>
+</div>

@@ -1,0 +1,126 @@
+/* .container{
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 40vh;
+  box-shadow: 3px 3px 3px 3px lightblue;
+  border-radius: 20px;
+}
+
+.login form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login form input,button{
+  margin: 3%;
+  outline: none;
+  border: none;
+  background: gainsboro;
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+
+.show-pass{
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.login form span{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login form a{
+  text-decoration: none;
+  color: darkcyan;
+  font-size: large;
+  transition: 0.3s ease;
+}
+
+.login form a:hover{
+  color: black;
+  transition: 0.3s ease;
+} */
+
+/* ----------------------------------------------- */
+
+
+
+.content-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+.content-container .img{
+  width: 50%;
+}
+.content-container .img img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.details{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details h2{
+  margin-bottom: 20px;
+}
+
+
+.details form{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.details form input{
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px 0px;
+  width: 100%;
+}
+
+.details  form p{
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.details form button{
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.details form span{
+  text-align: center;
+}
+
+.details form span a{
+  color: black;
+
+}

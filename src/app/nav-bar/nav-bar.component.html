@@ -1,0 +1,21 @@
+
+
+
+<div class="container">
+  <div class="logo">
+    <h2>PitStop</h2>
+  </div>
+  <div class="nav">
+    <ul>
+      <p>{{uName}}</p>
+      <li><a routerLink="/">Home</a></li>
+      <li><a href="/createProduct">create product</a></li>
+      <li><a routerLink="">Contact us</a></li>
+    </ul>
+  </div>
+  <div class="search-cart">
+    <button>favourite</button>
+    <button>cart</button>
+    <button (click)="logOut()">Logout</button>
+  </div>
+</div>

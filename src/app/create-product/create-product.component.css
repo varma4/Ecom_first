@@ -1,0 +1,49 @@
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  background: lightblue;
+}
+.nav a{
+  text-decoration: none;
+}
+
+.title{
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+.form input,textarea,button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 30%;
+  outline: none;
+  border: none;
+  background: #9fd3c7;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+}
+
+.form input::placeholder,textarea::placeholder{
+  color: #142d4c;
+}
+
+@media (max-width: 600px){
+  .form input,textarea,button{
+    width: 80%;
+  }
+}

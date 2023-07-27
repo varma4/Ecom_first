@@ -1,0 +1,33 @@
+
+
+<div class="content-container">
+  <div class="img">
+    <img
+      src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-4.0.
+    3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1021&q=80"
+      alt=""
+    />
+  </div>
+  <div class="details">
+    <h2>Login to your account </h2>
+    <form #loginForm="ngForm" (submit)="loginDetails(loginForm.value)">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        autocomplete="off"
+        ngModel
+      />
+      <input
+        [type]="showPassword ? 'text' : 'password'"
+        name="password"
+        placeholder="Password"
+        autocomplete="off"
+        ngModel
+      />
+      <p (click)="showHidePassword()">show Password</p>
+      <button>Login</button>
+      <span>Already have an account? <a routerLink="/signup">Sign up</a></span>
+    </form>
+  </div>
+</div>

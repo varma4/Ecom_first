@@ -1,0 +1,11 @@
+<div class="nav">
+  <a routerLink="/">Back to Home</a>
+</div>
+<h3 class="title">{{title}}</h3>
+<form #productForm="ngForm" class="form" (submit)="getFormDetails(productForm.value)">
+  <input type="text" placeholder="Product Name" name="name" ngModel>
+  <input type="number" placeholder="Product Price" name="price" ngModel>
+  <textarea name="" placeholder="Product Description.." name="description" id="" cols="30" rows="2" ngModel></textarea>
+  <input type="text" placeholder="Product Images" name="images" ngModel>
+  <button>Add Product</button>
+</form>
