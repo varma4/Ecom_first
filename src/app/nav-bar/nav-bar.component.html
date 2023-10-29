@@ -3,19 +3,17 @@
 
 <div class="container">
   <div class="logo">
-    <h2>PitStop</h2>
+    <h2 routerLink="/">PitStop</h2>
   </div>
   <div class="nav">
     <ul>
-      <p>{{uName}}</p>
-      <li><a routerLink="/">Home</a></li>
-      <li><a href="/createProduct">create product</a></li>
-      <li><a routerLink="">Contact us</a></li>
+      <li routerLink="/myproducts">{{uName}}</li>
+      <!-- <li><a href="/createProduct">create product</a></li> -->
+      <li routerLink="/createProduct">create product</li>
     </ul>
   </div>
   <div class="search-cart">
-    <button>favourite</button>
-    <button>cart</button>
+    <button routerLink="/cart">cart</button>
     <button (click)="logOut()">Logout</button>
   </div>
 </div>

@@ -21,14 +21,13 @@ export class LoginComponent {
     this.dataService.saveLoginDetails(loginData).subscribe((res: any) => {
       this.details = res.userName
       const id = res.id
-      console.log(id);
-
-      console.log(res.id);
 
       localStorage.setItem("Token", res.token)
       localStorage.setItem("userName", res.userName)
       localStorage.setItem("id", res['id'])
       this.router.navigate(['/'])
+    },(error) => {
+      alert('Invalid login details')
     })
   }
 }

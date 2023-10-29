@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { parse } from 'dotenv';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ export class HomeComponent implements OnInit {
   isLoggedIn:boolean = false
   searchText = '';
 
+
   constructor(
     private dataService: DataService,
     private actRoute: ActivatedRoute,
@@ -23,7 +25,7 @@ export class HomeComponent implements OnInit {
     this.isLoggedIn = !!username
     this.dataService.data().subscribe((d : any) => {
       this.dataa = d.data
-      console.log(this.dataa);
+      // console.log(this.dataa);
 
       this.actRoute.params.subscribe(params => {
         let searchItem = params['searchId']
@@ -42,15 +44,19 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  userId(){
+    const id = localStorage.getItem('id')
+    return id || ''
+  }
+
   // addToCart(id: any){
   //   this.dataService.cartProducts(id)
   // }
   addToCart(prod: any){
-    console.log(prod);
-
     this.dataService.cartProducts(prod).subscribe(val => {
-      alert(`product added to cart ${val.name}`)
+      // alert(`product added to cart ${val.name}`)
+      // console.log(val);
+      console.log(val);
     })
-
   }
 }

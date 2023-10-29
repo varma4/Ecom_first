@@ -1,0 +1,19 @@
+<div class="cart">
+  <div class="nav">
+    <p routerLink="/">Home</p>
+  </div>
+  <h3>My products</h3>
+  <div class="myitems" *ngFor="let item of myproducts">
+    <a routerLink="/details/{{ item._id }}" >
+      <img src="{{ item.images[0] }}" alt="" />
+      <li>{{ item.name }}</li>
+      <li>{{ item.price | currency }}</li>
+    </a>
+    <div class="button">
+      <button>update</button>
+      <button (click)="remove(item)">remove</button>
+    </div>
+  </div>
+</div>
+
+

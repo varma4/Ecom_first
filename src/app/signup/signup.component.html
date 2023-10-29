@@ -1,90 +1,47 @@
-<!-- <div class="container">
-  <div class="mini">
-    <h3>Signup</h3>
-    <form #signForm="ngForm" (submit)="signupForm(signForm.value)">
-      <input
-        type="text"
-        placeholder="Name"
-        autocomplete="off"
-        name="name"
-        ngModel
-      />
-      <input
-        type="text"
-        placeholder="Email"
-        autocomplete="off"
-        name="email"
-        ngModel
-      />
-      <input
-        [type]="showPassword ? 'text' : 'password'"
-        placeholder="Confirm Password"
-        placeholder="Password"
-        name="password"
-        ngModel
-      />
-      <input
-        [type]="showPassword ? 'text' : 'password'"
-        placeholder="Confirm Password"
-        name="confirmpassword"
-        ngModel
-      /> -->
-<!-- <div class="check-password"> -->
-<!-- <input
-          type="checkbox"
-          class="checkbox"
-          (change)="showHidePassword($event)"
-        /> -->
-<!-- <p (click)="showHidePassword()">Show password</p>
-      </div>
-      <button>Sign up</button>
-      <span>Already have a account ? <a routerLink="/login">Login</a></span>
-    </form>
-  </div>
-</div> -->
 
 
-<div class="content-container">
-  <div class="img">
-    <img
-      src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-4.0.
-    3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1021&q=80"
-      alt=""
-    />
+
+  <div class="content-container">
+    <div class="img">
+      <img
+        src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-4.0.
+      3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1021&q=80"
+        alt=""
+      />
+    </div>
+    <div class="details">
+      <h2>Create an account </h2>
+      <form #signForm="ngForm" (submit)="signupForm(signForm.value)">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          autocomplete="off"
+          ngModel
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          autocomplete="off"
+          ngModel
+        />
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          name="password"
+          placeholder="Password"
+          autocomplete="off"
+          ngModel
+        />
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          name="confirmpassword"
+          placeholder="Confirm Password"
+          ngModel
+        />
+        <p (click)="showHidePassword()">show Password</p>
+        <button>Create Account</button>
+        <span>Already have an account? <a routerLink="/login">Log in</a></span>
+      </form>
+    </div>
   </div>
-  <div class="details">
-    <h2>Create an account </h2>
-    <form #signForm="ngForm" (submit)="signupForm(signForm.value)">
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        autocomplete="off"
-        ngModel
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        autocomplete="off"
-        ngModel
-      />
-      <input
-        [type]="showPassword ? 'text' : 'password'"
-        name="password"
-        placeholder="Password"
-        autocomplete="off"
-        ngModel
-      />
-      <input
-        [type]="showPassword ? 'text' : 'password'"
-        name="confirmpassword"
-        placeholder="Confirm Password"
-        ngModel
-      />
-      <p (click)="showHidePassword()">show Password</p>
-      <button>Create Account</button>
-      <span>Already have an account? <a routerLink="/login">Log in</a></span>
-    </form>
-  </div>
-</div>

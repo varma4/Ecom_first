@@ -157,6 +157,10 @@ img{
   color: black;
 } */
 
+a{
+  color: black;
+}
+
 .pLogin{
   width: 100%;
   height: 100vh;
@@ -197,7 +201,7 @@ img{
   padding: 0.5rem;
   font-weight: 500;
   outline: none;
-  color: white;
+  color: black;
 }
 .search button{
   color: grey;
@@ -214,6 +218,7 @@ img{
 
 
 .container-products {
+  margin-top: 2%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

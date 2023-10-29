@@ -13,6 +13,7 @@ import { CreateProductComponent } from './create-product/create-product.componen
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CartComponent } from './cart/cart.component';
+import { MyproductsComponent } from './myproducts/myproducts.component';
 
 
 
@@ -25,7 +26,8 @@ import { CartComponent } from './cart/cart.component';
     CreateProductComponent,
     LoginComponent,
     SignupComponent,
-    CartComponent
+    CartComponent,
+    MyproductsComponent
   ],
   imports: [
     BrowserModule,

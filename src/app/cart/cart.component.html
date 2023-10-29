@@ -1,1 +1,14 @@
-<p>cart works!</p>
+<div class="cart">
+  <div class="nav">
+    <p routerLink="/">Home</p>
+    <h2>Cart</h2>
+  </div>
+  <div class="cartItems" *ngFor="let item of items">
+    <img src="{{item.images[0]}}" alt="">
+    <li>{{item.name}}</li>
+    <li>{{item.price | currency}}</li>
+    <div class="button">
+      <button (click)="removeItem(item)">remove</button>
+    </div>
+  </div>
+</div>
