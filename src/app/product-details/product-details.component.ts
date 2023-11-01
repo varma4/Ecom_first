@@ -19,16 +19,16 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.data().subscribe((val) => {
       this.dataa = val.data
-      console.log(this.dataa);
+      // console.log(this.dataa);
 
       this.actRoute.params.subscribe((params) => {
         let id = params['id']
-        console.log(id);
+        // console.log(id);
 
         this.singleProduct =this.dataa.find(product =>{
           return product._id == id
         })
-        console.log(this.singleProduct);
+        // console.log(this.singleProduct);
 
       })
 

@@ -19,13 +19,13 @@ export class MyproductsComponent implements OnInit{
   getItems(){
     this.service.getMyProducts().subscribe((val:any) => {
       this.myproducts = val.myproducts
-      console.log(this.myproducts)
+      // console.log(this.myproducts)
     })
   }
 
   remove(item: any){
     this.service.removeMyProduct(item._id).subscribe((val) => {
-      console.log(val);
+      // console.log(val);
       this.getItems()
     })
   }

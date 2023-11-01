@@ -53,7 +53,7 @@ export class DataService {
   }
 
   removeMyProduct(itemId : string){
-    console.log(itemId)
+    // console.log(itemId)
     const userId = localStorage.getItem('id')
     return this.http.delete(`https://pitstop-80pm.onrender.com/deleteuserItem/${userId}/${itemId}`)
   }
@@ -75,16 +75,16 @@ export class DataService {
 
   removeFromCart(itemId: any){
     const headers = this.getHeaders()
-    console.log(itemId);
+    // console.log(itemId);
     const userId = localStorage.getItem('id')
     return this.http.delete(`https://pitstop-80pm.onrender.com/deleteItem/${userId}/${itemId}`, {headers})
   }
 
   cartProducts(product: any): Observable <any>{
-    console.log("-------------------",product);
+    // console.log("-------------------",product);
     product["actualId"] = product._id
     delete product._id
-    console.log(product);
+    // console.log(product);
     const currentUser = localStorage.getItem('id')
     const headers = this.getHeaders()
 
@@ -96,6 +96,16 @@ export class DataService {
     const token = localStorage.getItem('Token');
     return new HttpHeaders().set('Authorization', `Bearer ${token}`);
   }
+
+  // verify email
+  verifyEmail(userId: string): Observable<any> {
+
+    // return this.http.get(`https://pitstop-80pm.onrender.com/verify?userId=${userId}`);
+    return this.http.get(`https://pitstop-80pm.onrender.com/verify/${userId}`);
+
+  }
+
+
 
 
 }

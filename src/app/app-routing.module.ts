@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CartComponent } from './cart/cart.component';
 import { MyproductsComponent } from './myproducts/myproducts.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,7 +17,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'myproducts', component: MyproductsComponent}
+  {path: 'myproducts', component: MyproductsComponent},
+  {path: 'verify/:userId  ', component: EmailVerificationComponent },
+
 ];
 
 @NgModule({

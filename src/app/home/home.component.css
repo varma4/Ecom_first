@@ -175,9 +175,10 @@ a{
 }
 
 .pLogin .links{
-  width: 20%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .pLogin .links a{

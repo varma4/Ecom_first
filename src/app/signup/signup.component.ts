@@ -17,9 +17,8 @@ export class SignupComponent {
     this.showPassword = !this.showPassword
   }
   signupForm(signupData: any){
-    console.log(signupData)
     this.dataService.saveSignUpDetails(signupData).subscribe(val => {
-      console.log(val);
+      // console.log(val);
       this.router.navigate(['/login'])
     })
   }

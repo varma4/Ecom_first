@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { parse } from 'dotenv';
+
 
 @Component({
   selector: 'app-home',

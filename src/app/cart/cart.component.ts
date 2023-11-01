@@ -8,17 +8,19 @@ import { DataService } from '../shared/data.service';
 })
 export class CartComponent implements OnInit {
   items: any[] = [];
+  userId: any = ''
   constructor(private service: DataService) {}
 
   ngOnInit(): void {
     this.getCartItems()
+    this.userId = localStorage.getItem('id')
   }
 
   getCartItems(){
     this.service.getcartProducts().subscribe((val) => {
       console.log(val);
       this.items = val.cartItems;
-      console.log(val.cartItems);
+      // console.log(val.cartItems);
     });
   }
 

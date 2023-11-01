@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CartComponent } from './cart/cart.component';
 import { MyproductsComponent } from './myproducts/myproducts.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
 
 
 
@@ -27,7 +28,8 @@ import { MyproductsComponent } from './myproducts/myproducts.component';
     LoginComponent,
     SignupComponent,
     CartComponent,
-    MyproductsComponent
+    MyproductsComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,

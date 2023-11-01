@@ -12,10 +12,10 @@ export class NavBarComponent implements OnInit{
   constructor(private router: Router, private dataService : DataService){}
   ngOnInit(): void {
     const userName = localStorage.getItem('userName')
-    console.log(userName);
+    // console.log(userName);
     this.uName = userName
   }
-  
+
 
 
 
